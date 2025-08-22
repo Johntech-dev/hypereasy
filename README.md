@@ -302,8 +302,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Submission Details
 - **Category**: Public Goods Track
 - **Deadline**: August 22, 2025
-- **Demo Video**: [2-minute demo showcasing both developer and no-code usage]
-- **Live Demo**: [https://your-hypereasy-app.vercel.app]
 
 ### Key Features for Judging
 - ✅ Open-source (MIT License)
@@ -314,12 +312,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ✅ Full Hyperliquid integration
 - ✅ HyperEVM support via Lava Network
 
-## 📞 Support
-
-- **Documentation**: [https://your-hypereasy-app.vercel.app/docs]
-- **Issues**: [GitHub Issues](https://github.com/yourusername/hypereasy/issues)
-- **Discord**: [Join our community](https://discord.gg/hypereasy)
-- **Email**: support@hypereasy.dev
 
 ## 🙏 Acknowledgments
 
