@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Transaction {
+  id        String   @id @default(cuid())
+  asset     String
+  amount    Float
+  price     Float
+  isBuy     Boolean
+  orderType String   @default("market")
+  status    String   @default("pending") // pending, completed, failed
+  orderId   String?  // Hyperliquid order ID
+  userId    String?  // Optional user identification
+  timestamp DateTime @default(now())
+  
+  @@map("transactions")
+}
+
+model VaultOperation {
+  id        String   @id @default(cuid())
+  action    String   // deposit, withdraw
+  amount    Float
+  status    String   @default("pending") // pending, completed, failed
+  userId    String?  // Optional user identification
+  timestamp DateTime @default(now())
+  
+  @@map("vault_operations")
+}
+
+model ApiUsage {
+  id        String   @id @default(cuid())
+  endpoint  String
+  method    String
+  status    Int      // HTTP status code
+  userId    String?
+  timestamp DateTime @default(now())
+  
+  @@map("api_usage")
+}
